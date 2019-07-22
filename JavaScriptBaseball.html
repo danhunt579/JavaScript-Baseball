@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Baseball Clear Map</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link href="mattelBaseballStyle.css" rel="stylesheet" />
+   <script src = "bb.js" async></script>
+   
+ </head>
+
+<body>
+	<!--gamebox is the backgound image in css for the animation. It is also handheld720 like below.   -->
+	<div id="gamebox">	
+		<div id = "innings">1</div>
+		<div id = "outs">0</div>
+		<div id = "balls">0</div>
+		<div id = "strikes">0</div>
+		<img src="ss_marker2.png" id="lf" alt="lf" />
+		<img src="ss_marker2.png" id="cf" alt="cf" />
+		<img src="ss_marker2.png" id="rf" alt="rf" />
+		<img src="ss_marker2.png" id="third" alt="3b" />
+		<img src="ss_marker2.png" id="second" alt="2b" /> 
+		<img src="ss_marker2.png" id="first" alt="1b" /> 
+		<img src="ss_marker2.png" id="home" alt="4b" /> 
+		<!--This img is the image that makes the image map work-->
+		<img src="mattelBaseball_handheld720.jpg" id = "handheldOver" alt = "Handheld" usemap = "#pitch" />
+		
+		<!--This is the div that holds the red ball and is animated in CSS with #marker
+		-->
+		<div id="ball" class="sprite"><img src="ss_marker2.png" id="marker" alt ="marker" /></div>
+		
+		<!--This is the image map that allows the buttons to make the pitch happen-->
+		<map name="pitch">
+			<area id="pitch" shape="rect" coords="85, 425, 140, 475" />	<!--Pitch Button-->
+			<area id="hit" shape="rect" coords="370, 425, 425, 475"  /> <!--Hit Button-->
+			<area id="score" shape="rect" coords="89, 370, 141, 415"  /> <!--Score Button-->
+			<area id="run" shape="rect" coords="368, 370, 420, 412"  /> <!--Run Button-->
+		</map>
+		
+		<map name="hit">
+
+		</map>
+		
+	</div>
+	
+	
+	
+</body>
+</html>
+
+
+<!--
+The challenge with this page was that I wanted to use an image map from chapter 4 to select the buttons from the handheld unit.  
+Those buttons need to mapped on an image that is in an HTML element.
+I also want to animate the ball with the @keyfames command which seems to require an image to run over a background image
+I solved this by putting the same image as a background image in CSS and as a block image in the HTML.
+-->

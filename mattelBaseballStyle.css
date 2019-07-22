@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+html {
+	background: linear-gradient(to bottom right, black, gray);
+}
+
+body {
+	margin: 0px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+/* This is the background image set for the animation*/
+#gamebox {
+	background: url(mattelBaseball_handheld720.jpg) center no-repeat;
+	height: 720px;
+	flex: 0 0 700px;
+	position: relative;
+}
+
+
+#marker{
+	position: absolute; 
+	left: 340px;
+	top: 209px;
+	/* display: none; */
+}
+
+/* This is the animation from start to end */
+/* @keyframes pitch { */
+		/* 0% {postition: absolute;left: 343px; top: 209px;} */
+		/* 100% {position: absolute; left: 340px; top: 380px;} */
+/* } */
+/* This starts the animation with no delay in 10 steps */
+/* #marker { */
+	/* animation: pitch 5s steps(10); */
+	/* /* animation-delay: 1s; */ */
+/* } */
+/* This is helpful to set the coordinates of the image map in the HTML */
+#gamebox map#pitch {
+	border: 1px solid black;
+}
+/* This formats the second image defined in HTML to work with the map */
+#handheldOver {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*This is to set the format of the scoreboard*/
+#innings {
+	color: red;
+	position: absolute;
+	left: 287px;
+	top: 60px;
+}
+/* This sets the position of outs*/
+#outs {
+	color: red;
+	position: absolute;
+	left: 330px;
+	top: 59px;
+}
+
+#balls {
+	color: red;
+	position: absolute;
+	left: 378px;
+	top: 58px;
+}
+
+#strikes {
+	color: red;
+	position: absolute;
+	left: 426px;
+	top: 57px;
+}
+
+img#lf {
+	position: absolute;
+	left: 236px;
+	top: 115px;
+}
+
+img#cf {
+	position: absolute;
+	left: 343px;
+	top: 89px;
+}
+
+img#rf {
+	position: absolute;
+	left: 450px;
+	top: 115px;
+}
+
+img#third {
+	position: absolute;
+	left: 230px;
+	top: 230px;
+}
+
+img#second {
+	position: absolute;
+	left: 343px;
+	top: 135px;
+}
+
+img#first {
+	position: absolute;
+	left: 453px;
+	top: 230px;
+}
+
+img#home {
+	position: absolute;
+	left: 340px;
+	top: 330px;
+}
